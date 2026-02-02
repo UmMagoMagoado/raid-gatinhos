@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+#cats-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Gatinho */
+.cat {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+
+  background-image: url("cat.png");
+  background-size: cover;
+
+  left: -80px;
+
+  animation-name: run;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes run {
+  to {
+    transform: translateX(120vw);
+  }
+}
+
+
+/* Animação: esquerda → direita */
+@keyframes run {
+  from {
+    transform: translateX(-80px);
+  }
+  to {
+    transform: translateX(110vw);
+  }
+}
